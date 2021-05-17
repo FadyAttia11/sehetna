@@ -18,7 +18,7 @@ session_start();
 
         if($result) {
           $_SESSION['user_id'] = $user_name;
-          header('Location: labour-extra.php');
+          header('Location: index.php');
         } else {
           $error_msg =  "username or email is already taken!";
         }
