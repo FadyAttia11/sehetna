@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+    include("connection.php");
+    include("functions.php");
+
+    $user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,11 +64,11 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="index.php">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#departments">Departments</a></li>
-          <li><a href="#doctors">Doctors</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="new-hospital.php">Add New Hospital</a></li>
+          <li><a href="view-reservations.php">View Reservations</a></li>
+          <li><a href="all-hospitals.php?zone=All">All Hospitals</a></li>
+          <li><a href="#">Balance <?php echo $user_data['balance'] ?> L.E</a></li>
+          <li><a href="#">Admin</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
